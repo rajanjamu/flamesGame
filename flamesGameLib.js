@@ -3,15 +3,22 @@ function flamesCount(name1, name2) {
 	name2 = name2.toLowerCase().split("");
 	var i = 0;
 	var j = 0;
+
+	// Do not increement index of first name if there is a match
+	var flag = false;
+
 	while (i < name1.length) {
 		while (j < name2.length) {
 			if (name1[i] == name2[j]) {
 				name1.splice(i, 1);
 				name2.splice(j, 1);
+				flag = true;
+				break;
 			}
 			j += 1;
 		}
-		i += 1;
+		if (flag != true) { i += 1; }
+		flag = false;
 		j = 0;
 	}
 	return name1.length + name2.length;

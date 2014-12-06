@@ -10,12 +10,14 @@
 	<!-- Optional theme -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
 
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 
 	<link rel="stylesheet" type="text/css" href="main.css">
 
-	<script src="flamesgameLib.js"></script>
+	<script src="flamesgameLib.js" type="text/javascript"></script>
 </head>
 <body>
 	<h2>Flames Game</h2>
@@ -26,13 +28,18 @@
 	</div>
 	<button onClick="showAnswer()" type="button" class="btn btn-primary btn-lg btn-block  btn-custom">Test your relation</button>
 	<div id="answer"></div>
+	<div id="footer" class="container">
+	<div class="container">
+		<p class="text-muted">&copy; Rajan Gupta</p>
+	</div>
+</div>
 
 	<script>
-	// document.getElementById("answer").innerHTML = flamesGame("Rajan", "Suchita");
 	function showAnswer() {
 		var name1 = document.getElementById("name1").value
 		var name2 = document.getElementById("name2").value
-		document.getElementById("answer").innerHTML = flamesGame(name1, name2);
+		var answer = flamesGame(name1, name2);
+		document.getElementById("answer").innerHTML = answer;
 	}
 	</script>
 
