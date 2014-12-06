@@ -28,15 +28,17 @@ h1 {
 .form-control {
 	height: 70px;
 	text-align: center;
-	font-size: 18px;
+	font-size: 20px;
 	margin-top: 20px;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 900;
 }
 
 .btn-custom {
 	margin-top: 30px;
 	margin-right: auto;
 	margin-left: auto;
-	width: 462px;
+	width: 536px;
 	height: 60px;
 	font-family: 'Open Sans', sans-serif;
 	font-size: 25px;
