@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Flames Game</title>
+	
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="main.css">
+
+	<script src="flamesgameLib.js"></script>
+</head>
+<body>
+	<h2>Flames Game</h2>
+	<!-- <h1>Test your relation</h1> -->
+	<div class="input-group">
+  		<input id="name1" type="text" class="form-control" placeholder="Your name">
+  		<input id="name2" type="text" class="form-control" placeholder="His or her name">
+	</div>
+	<button onClick="showAnswer()" type="button" class="btn btn-primary btn-lg btn-block  btn-custom">Test your relation</button>
+	<div id="answer"></div>
+
+	<script>
+	// document.getElementById("answer").innerHTML = flamesGame("Rajan", "Suchita");
+	function showAnswer() {
+		var name1 = document.getElementById("name1").value
+		var name2 = document.getElementById("name2").value
+		document.getElementById("answer").innerHTML = flamesGame(name1, name2);
+	}
+	</script>
+
+</body>
+</html>
